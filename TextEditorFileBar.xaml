@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SharpEditor.TextEditorFileBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             mc:Ignorable="d">
+    <Menu>
+    <MenuItem Header="_File">
+        <MenuItem Header="_New" x:Name="menuNew" Command="ApplicationCommands.New"/>
+        <MenuItem Header="_Open" x:Name="menuOpen" Command="ApplicationCommands.Open"/>
+        <MenuItem Header="_Save" x:Name="menuSave" Command="ApplicationCommands.Save"/>
+        <MenuItem Header="Save As" x:Name="menuSaveAs" Command="ApplicationCommands.SaveAs" />
+        <Separator />
+        <MenuItem Header="_Print" x:Name="menuPrint" Command="ApplicationCommands.Print"/>
+        <MenuItem Header="_Print Preview" x:Name="menuPrintPreview" Command="ApplicationCommands.PrintPreview"/>
+        <Separator />
+        <MenuItem Header="Close" x:Name="menuClose" Command="ApplicationCommands.Close"/>
+    </MenuItem>
+    <MenuItem Header="_Edit">
+        <MenuItem Header="_Undo" x:Name="menuUndo" Command="ApplicationCommands.Undo" />
+        <MenuItem Header="_Redo" x:Name="menuRedo" Command="ApplicationCommands.Redo" />
+        <Separator />
+        <MenuItem Header="Cu_t" x:Name="menuCut" Command="ApplicationCommands.Cut" />
+        <MenuItem Header="_Copy" x:Name="menuCopy" Command="ApplicationCommands.Copy"/>
+        <MenuItem Header="_Paste" x:Name="menuPaste" Command="ApplicationCommands.Paste" />
+        <MenuItem Header="_Delete" x:Name="menuDelete" Command="ApplicationCommands.Delete"/>
+        </MenuItem>
+    <MenuItem Header="_Help">
+        <MenuItem Header="_About" Click="About_Click"  />
+    </MenuItem>
+    </Menu>
+</UserControl>
+
